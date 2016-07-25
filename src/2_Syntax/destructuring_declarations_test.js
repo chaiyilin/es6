@@ -21,7 +21,7 @@ describe('destructuring_declarations', () => {
         expect(c === "𠮷").toEqual(true);
     });
 
-    it('with generator instances', () => { 
+    it('with generator instances', () => {
         var [a, b, c] = (function*(){ yield 1; yield 2; }());
         expect( a === 1 && b === 2 && c === undefined).toEqual(true);
     });
