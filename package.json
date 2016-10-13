@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest-cli": "^13.2.3"
+    "jest-cli": "^15.0.2"
   },
   "jest": {
-    "testPathDirs": ["src"],
-    "testRegex":"test.js$"
+    "testPathDirs": [
+      "src"
+    ],
+    "testRegex": "test.js$"
   }
 }
