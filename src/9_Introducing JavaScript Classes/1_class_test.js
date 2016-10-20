@@ -46,6 +46,50 @@ describe('class', () => {
         }
     );
 
+    it('geter and setter', () => {
+        class Person {
+            constructor(name) {
+                this._name = name;
+            }
+
+            get name() {
+                return this._name
+            }
+
+            set name(name) {
+                this._name = name
+            }
+        }
+
+        var person = new Person("Nicholas");
+        expect(person.name === 'Nicholas').toEqual(true);
+        person.name = 'bbb';
+        expect(person.name === 'bbb').toEqual(true);
+        //not private
+        expect(person._name === 'bbb').toEqual(true);
+    });
+
+    it('function without new', () => {
+        function Person(name) {
+            let _name = name;
+            return {
+                get name() {
+                    return _name
+                },
+
+                set name(name) {
+                    _name = name
+                }
+            }
+
+        }
+
+        var person = Person("Nicholas");
+        expect(person.name === 'Nicholas').toEqual(true);
+        person.name = 'bbb';
+        expect(person.name === 'bbb').toEqual(true);
+    });
+
     //designed to be used in variable declarations or passed into functions as arguments
     it('Class Expressions', () => {
             let PersonClass = class {
