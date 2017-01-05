@@ -24,7 +24,7 @@ describe('Template Literals', () => {
         //rely on arguments to always reflect the initial call state
     });
 
-    it('Rest Parameters', () => {
+    fit('Rest Parameters', () => {
         function checkArgs(...args) {
             expect(args.length === 2).toEqual(true);
             expect(arguments.length === 2).toEqual(true);
