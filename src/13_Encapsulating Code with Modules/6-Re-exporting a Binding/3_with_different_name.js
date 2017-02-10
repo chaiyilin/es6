@@ -1,0 +1,1 @@
+export {sum as add} from "./example.js";

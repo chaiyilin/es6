@@ -1,5 +1,6 @@
 //jest.unmock('./sum'); // unmock to use the actual implementation of sum
 
+//for module.exports etc.
 describe('property initializer shorthand', () => {
     it('Default Parameter Values', () => {
         function createPerson(name, age) {
@@ -8,12 +9,13 @@ describe('property initializer shorthand', () => {
                 age
             };
         }
-        const person=createPerson('aaa',10);
+
+        const person = createPerson('aaa', 10);
         expect(person.name === 'aaa').toEqual(true);
 
-        const name='aaa';
-        const age=10;
-        const person1={
+        const name = 'aaa';
+        const age = 10;
+        const person1 = {
             name,
             age
         };
@@ -44,7 +46,7 @@ describe('property initializer shorthand', () => {
         //getter
         let person = {
             firstName: "Nicholas",
-            get lastName(){
+            get lastName() {
                 return this.firstName
             }
 
@@ -54,7 +56,7 @@ describe('property initializer shorthand', () => {
         //function
         let person1 = {
             firstName: "Nicholas",
-            lastName: function(){
+            lastName: function () {
                 return this.firstName
             }
 

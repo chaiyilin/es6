@@ -1,0 +1,12 @@
+<!--without type="module"-->
+<script src="module.js"></script>
+<script type="text/javascript" src="module.js"></script>
+
+<!--with type="module"-->
+<!-- load a module JavaScript file -->
+<script type="module" src="module.js"></script>
+<!-- include a module inline -->
+<script type="module">
+    import {sum} from "./example.js";
+    let result = sum(1, 2);
+</script>

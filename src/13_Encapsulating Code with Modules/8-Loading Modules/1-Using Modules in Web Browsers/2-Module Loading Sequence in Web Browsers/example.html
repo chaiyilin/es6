@@ -1,0 +1,29 @@
+<!-- this will execute first -->
+<script type="module" src="module1.js"></script>
+<!-- this will execute second -->
+<script type="module">
+    import {sum} from "./example.js";
+    let result = sum(1, 2);
+</script>
+<!-- this will execute third -->
+<script type="module" src="module2.js"></script>
+
+<!--
+1. Download and parse module1.js.
+2. Recursively download and parse import resources in module1.js.
+3. Parse the inline module.
+4. Recursively download and parse import resources in the inline module.
+5. Download and parse module2.js.
+6. Recursively download and parse import resources in module2.js.
+
+When loading is complete, nothing is executed until after the document
+has been completely parsed. After document parsing is completed,
+the following actions happen:
+1. Recursively execute import resources for module1.js.
+2. Execute module1.js.
+3. Recursively execute import resources for the inline module.
+4. Execute the inline module.
+5. Recursively execute import resources for module2.js.
+6. Execute module2.js.
+
+-->

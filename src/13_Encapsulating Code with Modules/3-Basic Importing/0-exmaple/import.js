@@ -1,0 +1,1 @@
+import {identifier1, identifier2} from "./example.js";
