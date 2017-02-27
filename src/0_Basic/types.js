@@ -1,3 +1,12 @@
+//typeof operator can return one of 6 potential results
+typeof 123 // "number"
+typeof "abc" // "string"
+typeof true // "boolean"
+typeof {a: 1} // "object"
+typeof function foo() {} // "function"
+typeof undefined // "undefined"
+typeof Symbol('foo') // "symbol"
+
 let number = 1;
 console.log(typeof number);
 
@@ -5,6 +14,7 @@ console.log(typeof Number.prototype);
 Number.prototype.addto = function (x) {
     return this + x;
 };
+console.log(typeof NaN) // "number"
 
 let array = [1];
 console.log(typeof array);//object
@@ -14,6 +24,7 @@ console.log(array[0]);
 // array indexOf primitive
 console.log(array.indexOf(1));
 
+console.log(typeof null) // "object"
 let object1 = {a: 1};
 console.log('using object reference is fine');
 let array1 = [object1];
@@ -65,3 +76,5 @@ let keys = Object.keys(object);
 //become similar again
 console.log(object[keys[0]]);
 
+
+console.log(typeof class Foo {}); // "function"
