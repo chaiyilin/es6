@@ -18,7 +18,8 @@ console.log(car1.drive());
 // constructor
 function ConstructorCar (name) {
     if (!(this instanceof ConstructorCar)) {
-        throw new Error("ConstructorCar should be created with `new`")
+        //this.constructor.name
+        throw new Error(arguments.callee.name+" should be created with `new`")
     }
     this.name = name;
 }
