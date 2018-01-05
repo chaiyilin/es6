@@ -1,0 +1,12 @@
+let a=1
+function a1(){
+    console.log(a)
+}
+
+let a2=function (){
+    console.log(a)
+}
+
+a1()
+a2()
+
