@@ -1,0 +1,1 @@
+http://exploringjs.com/es6/ch_generators.html
