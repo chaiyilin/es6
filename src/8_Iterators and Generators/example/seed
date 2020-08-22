@@ -1,0 +1,12 @@
+function* generatorFunction(value) {
+  while (true) {
+    value = yield value * 10
+  }
+}
+
+// Initiate a generator and seed it with an initial value
+const generator = generatorFunction(0)
+
+for (let i = 0; i < 5; i++) {
+  console.log(generator.next(i).value)
+}

@@ -1,0 +1,1 @@
+https://www.taniarascia.com/understanding-generators-in-javascript/
